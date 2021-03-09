@@ -1,5 +1,6 @@
 package com.billy.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,12 +15,15 @@ import java.io.IOException;
 @RequestMapping(value = "/file")
 public class FileController {
 
+    @Value(value = "${file.path}")
+    private String filePath;
+
     @PostMapping(value = "fileUpload")
     public void fileUpload(HttpServletRequest request, @RequestParam(value = "file") MultipartFile multipartFile) {
         if (multipartFile != null) {
-            String path = "D:\\document\\code\\IDEA\\learning\\springlearning\\src\\main\\resources\\file\\";
             String newFileName = multipartFile.getOriginalFilename();
-            File file = new File(path + newFileName);
+            System.out.println(filePath);
+            File file = new File(filePath + newFileName);
             try {
                 multipartFile.transferTo(file);
             } catch (IOException e) {
