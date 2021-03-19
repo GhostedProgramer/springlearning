@@ -19,7 +19,8 @@ public class FileController {
     private String filePath;
 
     @PostMapping(value = "fileUpload")
-    public void fileUpload(HttpServletRequest request, @RequestParam(value = "file") MultipartFile multipartFile) {
+    public void fileUpload(@RequestParam(value = "radio") String radio, @RequestParam(value = "file") MultipartFile multipartFile) {
+        System.out.println(radio);
         if (multipartFile != null) {
             String newFileName = multipartFile.getOriginalFilename();
             System.out.println(filePath);
