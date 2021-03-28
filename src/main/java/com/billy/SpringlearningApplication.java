@@ -15,9 +15,9 @@ public class SpringlearningApplication {
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(SpringlearningApplication.class, args);
         Person person = (Person) context.getBean("person1");
-        System.out.println(person);
+//        System.out.println(person);
         Person personComponent = context.getBean("personComponent", Person.class);
-        System.out.println(personComponent);
+//        System.out.println(personComponent);
     }
 
 }
