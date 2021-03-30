@@ -17,6 +17,7 @@
         <java.version>11</java.version>
         <drools.version>7.47.0.Final</drools.version>
         <kotlin.version>1.4.31</kotlin.version>
+        <mp.version>3.1.0</mp.version>
     </properties>
     <dependencies>
         <dependency>
@@ -66,14 +67,20 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.1.0</version>
+            <version>${mp.version}</version>
+        </dependency>
+        <!-- mybatisPlus 多数据源 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <version>${mp.version}</version>
         </dependency>
         <!-- mybatisPlus 自动建表 -->
-        <dependency>
-            <groupId>com.gitee.sunchenbin.mybatis.actable</groupId>
-            <artifactId>mybatis-enhance-actable</artifactId>
-            <version>1.1.1.RELEASE</version>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>com.gitee.sunchenbin.mybatis.actable</groupId>-->
+        <!--            <artifactId>mybatis-enhance-actable</artifactId>-->
+        <!--            <version>1.1.1.RELEASE</version>-->
+        <!--        </dependency>-->
         <!-- 引入阿里数据库连接池 -->
         <dependency>
             <groupId>com.alibaba</groupId>
