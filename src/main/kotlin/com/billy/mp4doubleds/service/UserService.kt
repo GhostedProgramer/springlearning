@@ -1,7 +1,7 @@
 package com.billy.mp4doubleds.service
 
-import com.billy.mp4doubleds.mapper.ds1.UserMapper
-import com.billy.mp4doubleds.model.ds1.User
+import com.billy.mp4doubleds.mapper.UserMapper
+import com.billy.mp4doubleds.model.User
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

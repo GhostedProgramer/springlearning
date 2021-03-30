@@ -1,7 +1,7 @@
 package com.billy.mp4doubleds.controller
 
-import com.billy.mp4doubleds.model.ds1.User
-import com.billy.mp4doubleds.model.ds2.Account
+import com.billy.mp4doubleds.model.User
+import com.billy.mp4doubleds.model.Account
 import com.billy.mp4doubleds.service.AccountService
 import com.billy.mp4doubleds.service.UserService
 import org.springframework.beans.factory.annotation.Autowired

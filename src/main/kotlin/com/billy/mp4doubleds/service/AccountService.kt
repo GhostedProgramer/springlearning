@@ -1,8 +1,8 @@
 package com.billy.mp4doubleds.service
 
 import com.baomidou.dynamic.datasource.annotation.DS
-import com.billy.mp4doubleds.mapper.ds2.AccountMapper
-import com.billy.mp4doubleds.model.ds2.Account
+import com.billy.mp4doubleds.mapper.AccountMapper
+import com.billy.mp4doubleds.model.Account
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

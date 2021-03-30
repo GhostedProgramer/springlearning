@@ -1,5 +1,6 @@
-package com.billy.mp4doubleds.model.ds1
+package com.billy.mp4doubleds.model
 
+import com.baomidou.mybatisplus.annotation.IdType
 import com.baomidou.mybatisplus.annotation.TableId
 import com.baomidou.mybatisplus.annotation.TableName
 import java.io.Serializable
@@ -7,8 +8,8 @@ import java.io.Serializable
 @TableName("cuser")
 class User : Serializable {
 
-    @TableId
-    val id: Long? = null
+    @TableId(type = IdType.AUTO)
+    var id: Long? = null
 
     var username: String? = null
 
