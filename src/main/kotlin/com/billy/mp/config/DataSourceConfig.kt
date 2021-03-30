@@ -31,14 +31,6 @@ open class DataSourceConfig {
 
     @Value("\${spring.datasource.password}")
     private val password: String? = null
-    @Bean
-    @Throws(Exception::class)
-    open fun configProperties(): PropertiesFactoryBean {
-        val propertiesFactoryBean = PropertiesFactoryBean()
-        val resolver = PathMatchingResourcePatternResolver()
-        propertiesFactoryBean.setLocations(*resolver.getResources("classpath*:application.properties"))
-        return propertiesFactoryBean
-    }
 
     @Bean
     open fun dataSource(): DruidDataSource {
@@ -68,7 +60,7 @@ open class DataSourceConfig {
         sqlSessionFactoryBean.setDataSource(dataSource())
         val resolver = PathMatchingResourcePatternResolver()
         sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath*:com/gitee/sunchenbin/mybatis/actable/mapping/*/*.xml"))
-        sqlSessionFactoryBean.setTypeAliasesPackage("com.example.entity.*")
+        sqlSessionFactoryBean.setTypeAliasesPackage("com.billy.mp.model.*") //设置别名为了在mapper文件中无需写全包路径
         return sqlSessionFactoryBean
     }
 }
