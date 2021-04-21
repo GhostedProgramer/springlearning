@@ -19,8 +19,9 @@ public class SpringlearningApplication {
 //        System.out.println(person);
 //        Person personComponent = context.getBean("personComponent", Person.class);
 //        System.out.println(personComponent);
-        System.out.println(context.getBean("hello", String.class));
-        System.out.println(context.getBean("world", String.class));
+//        System.out.println(context.getBean("hello", String.class));
+//        System.out.println(context.getBean("world", String.class));
+        System.out.println(context.getBean("autoHello", String.class));
     }
 
 }
